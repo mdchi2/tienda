@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es"><head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Catálogo Premium - Mobile &amp; Desktop</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Catálogo Premium 2026</title>
 
 <style>
 :root {
@@ -16,9 +16,8 @@ font-family: 'Segoe UI', Roboto, sans-serif;
 background-color: var(--bg-body);
 color: var(--primary-text);
 margin: 0;
-padding-bottom: 80px; /* Espacio para el botón flotante */
+padding-bottom: 90px;
 }
-/* Barra Superior Fija */
 .header-bar {
 position: sticky;
 top: 0;
@@ -31,89 +30,94 @@ z-index: 1000;
 }
 .header-bar h1 {
 margin: 0;
-font-size: 1.2rem;
+font-size: 1.3rem;
 text-transform: uppercase;
 letter-spacing: 2px;
 color: var(--accent);
 }
-/* Contenedor Principal */
 .container {
 max-width: 1200px;
 margin: 0 auto;
 padding: 15px;
 display: grid;
-/* Móvil: 1 columna | Tablet: 2 | PC: 3 */
 grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-gap: 20px;
+gap: 25px;
 }
-/* Tarjetas de Producto */
 .card {
 background: var(--bg-card);
 border-radius: 12px;
 overflow: hidden;
-border: 1px solid #222;
+border: 1px solid #333;
+display: flex;
+flex-direction: column;
 }
 .card-img {
 width: 100%;
-height: auto;
-aspect-ratio: 3/4; /* Proporción ideal para ropa */
+aspect-ratio: 3/4;
 object-fit: cover;
+display: block;
 }
 .card-content {
 padding: 15px;
+flex-grow: 1;
 }
 .price {
-font-size: 1.6rem;
+font-size: 1.7rem;
 font-weight: bold;
-margin: 5px 0;
 color: #fff;
+margin-bottom: 5px;
 }
 .product-title {
 font-size: 1.1rem;
-margin: 5px 0;
+margin-bottom: 12px;
 color: var(--secondary-text);
+font-weight: 500;
 }
 .details-box {
 background: #282828;
-padding: 10px;
+padding: 12px;
 border-radius: 8px;
-margin-top: 10px;
-font-size: 0.85rem;
+font-size: 0.9rem;
+line-height: 1.6;
+}
+.detail-row {
+display: block;
+border-bottom: 1px solid #383838;
+padding: 4px 0;
+}
+.detail-row:last-child {
+border-bottom: none;
+}
+.label {
+color: var(--accent);
+font-weight: bold;
+margin-right: 5px;
 }
 .size-badge {
 display: inline-block;
 background: var(--accent);
 color: #000;
-padding: 2px 6px;
+padding: 1px 6px;
 border-radius: 4px;
 font-weight: bold;
-margin-right: 4px;
+margin-right: 3px;
+font-size: 0.8rem;
 }
-/* Botón de WhatsApp Flotante (Ideal para Celular) */
 .btn-float {
 position: fixed;
 bottom: 20px;
 right: 20px;
 background-color: var(--whatsapp);
 color: white;
-padding: 12px 20px;
+padding: 15px 25px;
 border-radius: 50px;
 text-decoration: none;
 font-weight: bold;
 box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+z-index: 2000;
 display: flex;
 align-items: center;
-gap: 10px;
-z-index: 2000;
-transition: transform 0.3s;
-}
-.btn-float:active {
-transform: scale(0.9);
-}
-/* Estilo para pantallas grandes */
-@media (min-width: 768px) {
-.header-bar h1 { font-size: 1.8rem; }
-.container { padding: 30px; gap: 30px; }
+gap: 8px;
 }
 </style>
 </head>
@@ -122,7 +126,7 @@ transform: scale(0.9);
 <h1>CATÁLOGO 2026</h1>
 </div>
 <a href="https://wa.me/541166069613" class="btn-float" target="_blank">
-<span>Consultar WhatsApp</span>
+<span>Consultar por WhatsApp</span>
 </a>
 <div class="container">
 <div class="card">
@@ -131,10 +135,9 @@ transform: scale(0.9);
 <div class="price">$110,000</div>
 <div class="product-title">Campera Farenheite Premium</div>
 <div class="details-box">
-<div><strong>COD:</strong> 01CP1047</div>
-<div style="margin-top: 5px;">
-<strong>Talles:</strong> <span class="size-badge">L</span><span class="size-badge">XL</span>
-</div>
+<span class="detail-row"><span class="label">COD:</span> 01CP1047</span>
+<span class="detail-row"><span class="label">Color:</span> Negro</span>
+<span class="detail-row"><span class="label">Talles:</span> <span class="size-badge">L</span><span class="size-badge">XL</span></span>
 </div>
 </div>
 </div>
@@ -144,10 +147,9 @@ transform: scale(0.9);
 <div class="price">$80,000</div>
 <div class="product-title">Campera Engomada</div>
 <div class="details-box">
-<div><strong>COD:</strong> 10CP1008</div>
-<div style="margin-top: 5px;">
-<strong>Talles:</strong> <span class="size-badge">L</span><span class="size-badge">XL</span>
-</div>
+<span class="detail-row"><span class="label">COD:</span> 10CP1008</span>
+<span class="detail-row"><span class="label">Color:</span> Negro</span>
+<span class="detail-row"><span class="label">Talles:</span> <span class="size-badge">L</span><span class="size-badge">XL</span></span>
 </div>
 </div>
 </div>
@@ -157,23 +159,21 @@ transform: scale(0.9);
 <div class="price">$100,000</div>
 <div class="product-title">Campera Farenheite</div>
 <div class="details-box">
-<div><strong>COD:</strong> 02CP1029</div>
-<div style="margin-top: 5px;">
-<strong>Talles:</strong> <span class="size-badge">L</span><span class="size-badge">XL</span><span class="size-badge">XXL</span>
-</div>
+<span class="detail-row"><span class="label">COD:</span> 02CP1029</span>
+<span class="detail-row"><span class="label">Color:</span> Negro</span>
+<span class="detail-row"><span class="label">Talles:</span> <span class="size-badge">L</span><span class="size-badge">XL</span><span class="size-badge">XXL</span></span>
 </div>
 </div>
 </div>
 <div class="card">
-<img src="campera.jpg" class="card-img">
+<img src="campera%20bond.jpg" class="card-img">
 <div class="card-content">
 <div class="price">$100,000</div>
-<div class="product-title">Campera Clásica</div>
+<div class="product-title">Campera Bond</div>
 <div class="details-box">
-<div><strong>COD:</strong> 03CP1036</div>
-<div style="margin-top: 5px;">
-<strong>Talles:</strong> <span class="size-badge">L</span><span class="size-badge">XL</span>
-</div>
+<span class="detail-row"><span class="label">COD:</span> 03CP1036</span>
+<span class="detail-row"><span class="label">Color:</span> Negro</span>
+<span class="detail-row"><span class="label">Talles:</span> <span class="size-badge">L</span><span class="size-badge">XL</span></span>
 </div>
 </div>
 </div>
@@ -183,10 +183,9 @@ transform: scale(0.9);
 <div class="price">$70,000</div>
 <div class="product-title">Campera Tipo Uniclo</div>
 <div class="details-box">
-<div><strong>COD:</strong> 10CP1002</div>
-<div style="margin-top: 5px;">
-<strong>Talles:</strong> <span class="size-badge">L</span><span class="size-badge">XL</span>
-</div>
+<span class="detail-row"><span class="label">COD:</span> 10CP1002</span>
+<span class="detail-row"><span class="label">Color:</span> Negro</span>
+<span class="detail-row"><span class="label">Talles:</span> <span class="size-badge">L</span><span class="size-badge">XL</span></span>
 </div>
 </div>
 </div>
@@ -196,11 +195,177 @@ transform: scale(0.9);
 <div class="price">$85,000</div>
 <div class="product-title">Parka Polo Premium</div>
 <div class="details-box">
-<div><strong>COD:</strong> 99CPPR1001</div>
-<div style="margin-top: 5px;">
-<strong>Colores:</strong> Azul / Verde <br>
-<strong>Talles:</strong> <span class="size-badge">S</span><span class="size-badge">M</span><span class="size-badge">L</span><span class="size-badge">XL</span>
+<span class="detail-row"><span class="label">COD:</span> 99CPPR1001</span>
+<span class="detail-row"><span class="label">Color:</span> Azul / Verde</span>
+<span class="detail-row"><span class="label">Talles:</span> <span class="size-badge">S</span><span class="size-badge">M</span><span class="size-badge">L</span><span class="size-badge">XL</span></span>
 </div>
+</div>
+</div>
+<div class="card">
+<img src="parka%20vcp.jpg" class="card-img">
+<div class="card-content">
+<div class="price">$90,000</div>
+<div class="product-title">Parka VCP</div>
+<div class="details-box">
+<span class="detail-row"><span class="label">COD:</span> 99CPPR1001</span>
+<span class="detail-row"><span class="label">Color:</span> Verde, Azul, Negro, Beige</span>
+<span class="detail-row"><span class="label">Talles:</span> <span class="size-badge">S</span><span class="size-badge">M</span><span class="size-badge">L</span></span>
+</div>
+</div>
+</div>
+<div class="card">
+<img src="parka%20zorken.jpg" class="card-img">
+<div class="card-content">
+<div class="price">$90,000</div>
+<div class="product-title">Parka Zorken</div>
+<div class="details-box">
+<span class="detail-row"><span class="label">COD:</span> 99CPPR1001</span>
+<span class="detail-row"><span class="label">Color:</span> Negro, Azul</span>
+<span class="detail-row"><span class="label">Talles:</span> <span class="size-badge">M</span><span class="size-badge">L</span><span class="size-badge">XL</span></span>
+</div>
+</div>
+</div>
+<div class="card">
+<img src="parka.jpg" class="card-img">
+<div class="card-content">
+<div class="price">$90,000</div>
+<div class="product-title">Parka</div>
+<div class="details-box">
+<span class="detail-row"><span class="label">COD:</span> 32CP1002</span>
+<span class="detail-row"><span class="label">Color:</span> Negro, Verde</span>
+<span class="detail-row"><span class="label">Talles:</span> <span class="size-badge">XXL</span></span>
+</div>
+</div>
+</div>
+<div class="card">
+<img src="chaleco%20engomado.jpg" class="card-img">
+<div class="card-content">
+<div class="price">$90,000</div>
+<div class="product-title">Chaleco Engomado</div>
+<div class="details-box">
+<span class="detail-row"><span class="label">COD:</span> 03CL1002</span>
+<span class="detail-row"><span class="label">Color:</span> Negro</span>
+<span class="detail-row"><span class="label">Talles:</span> <span class="size-badge">2</span></span>
+</div>
+</div>
+</div>
+<div class="card">
+<img src="chaleco%20clasico.jpg" class="card-img">
+<div class="card-content">
+<div class="price">$50,000</div>
+<div class="product-title">Chaleco Clásico</div>
+<div class="details-box">
+<span class="detail-row"><span class="label">COD:</span> 02CL1002</span>
+<span class="detail-row"><span class="label">Color:</span> Azul, Marrón</span>
+<span class="detail-row"><span class="label">Talles:</span> <span class="size-badge">2</span></span>
+</div>
+</div>
+</div>
+<div class="card">
+<img src="buzo%20peludito.jpg" class="card-img">
+<div class="card-content">
+<div class="price">$50,000</div>
+<div class="product-title">Buzo Peludito</div>
+<div class="details-box">
+<span class="detail-row"><span class="label">COD:</span> 03BU1042</span>
+<span class="detail-row"><span class="label">Color:</span> Negro</span>
+<span class="detail-row"><span class="label">Talles:</span> <span class="size-badge">S</span><span class="size-badge">M</span><span class="size-badge">L</span></span>
+</div>
+</div>
+</div>
+<div class="card">
+<img src="buzo%20capucha.jpg" class="card-img">
+<div class="card-content">
+<div class="price">$50,000</div>
+<div class="product-title">Buzo con Capucha</div>
+<div class="details-box">
+<span class="detail-row"><span class="label">COD:</span> 03BU1046</span>
+<span class="detail-row"><span class="label">Color:</span> Negro, Caoba</span>
+<span class="detail-row"><span class="label">Talles:</span> <span class="size-badge">S</span><span class="size-badge">M</span><span class="size-badge">L</span></span>
+</div>
+</div>
+</div>
+<div class="card">
+<img src="buzo%20friza.jpg" class="card-img">
+<div class="card-content">
+<div class="price">$40,000</div>
+<div class="product-title">Buzo Friza</div>
+<div class="details-box">
+<span class="detail-row"><span class="label">COD:</span> 04BU1018</span>
+<span class="detail-row"><span class="label">Color:</span> Azul, Verde, Azul Oscuro</span>
+<span class="detail-row"><span class="label">Talles:</span> <span class="size-badge">M</span></span>
+</div>
+</div>
+</div>
+<div class="card">
+<img src="buzo.jpg" class="card-img">
+<div class="card-content">
+<div class="price">$30,000</div>
+<div class="product-title">Buzo Classic</div>
+<div class="details-box">
+<span class="detail-row"><span class="label">COD:</span> 03BU1037</span>
+<span class="detail-row"><span class="label">Color:</span> Azul</span>
+<span class="detail-row"><span class="label">Talles:</span> <span class="size-badge">XL</span></span>
+</div>
+</div>
+</div>
+<div class="card">
+<img src="sweter%20fino.jpg" class="card-img">
+<div class="card-content">
+<div class="price">$20,000</div>
+<div class="product-title">Sweter Fino</div>
+<div class="details-box">
+<span class="detail-row"><span class="label">COD:</span> 035W1002</span>
+<span class="detail-row"><span class="label">Color:</span> Negro</span>
+<span class="detail-row"><span class="label">Talles:</span> <span class="size-badge">S</span><span class="size-badge">L</span><span class="size-badge">XL</span></span>
+</div>
+</div>
+</div>
+<div class="card">
+<img src="camiseta.jpg" class="card-img">
+<div class="card-content">
+<div class="price">$20,000</div>
+<div class="product-title">Camiseta</div>
+<div class="details-box">
+<span class="detail-row"><span class="label">COD:</span> 03RE2002</span>
+<span class="detail-row"><span class="label">Color:</span> Negro, Blanca</span>
+<span class="detail-row"><span class="label">Talles:</span> <span class="size-badge">S</span><span class="size-badge">M</span><span class="size-badge">L</span><span class="size-badge">XL</span></span>
+</div>
+</div>
+</div>
+<div class="card">
+<img src="camisa%20gabardina.jpg" class="card-img">
+<div class="card-content">
+<div class="price">$30,000</div>
+<div class="product-title">Camisa Gabardina</div>
+<div class="details-box">
+<span class="detail-row"><span class="label">COD:</span> 31CA1004</span>
+<span class="detail-row"><span class="label">Color:</span> Negro</span>
+<span class="detail-row"><span class="label">Talles:</span> <span class="size-badge">S</span><span class="size-badge">M</span><span class="size-badge">L</span><span class="size-badge">XL</span><span class="size-badge">XXL</span></span>
+</div>
+</div>
+</div>
+<div class="card">
+<img src="camisa%20le%C3%B1adora.jpg" class="card-img">
+<div class="card-content">
+<div class="price">$30,000</div>
+<div class="product-title">Camisa Leñadora</div>
+<div class="details-box">
+<span class="detail-row"><span class="label">COD:</span> 99CAPR1001</span>
+<span class="detail-row"><span class="label">Color:</span> Roja, Verde</span>
+<span class="detail-row"><span class="label">Talles:</span> <span class="size-badge">M</span><span class="size-badge">XXL</span></span>
+</div>
+</div>
+</div>
+<div class="card">
+<img src="camisa%20jean.jpg" class="card-img">
+<div class="card-content">
+<div class="price">$30,000</div>
+<div class="product-title">Camisa Jean</div>
+<div class="details-box">
+<span class="detail-row"><span class="label">COD:</span> 01CA1003</span>
+<span class="detail-row"><span class="label">Color:</span> Azul</span>
+<span class="detail-row"><span class="label">Talles:</span> <span class="size-badge">M</span></span>
 </div>
 </div>
 </div>
