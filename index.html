@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Catálogo Premium - Mobile &amp; Desktop</title>
+
+<style>
+:root {
+--bg-body: #121212;
+--bg-card: #1e1e1e;
+--primary-text: #ffffff;
+--secondary-text: #b0b0b0;
+--accent: #f1c40f; --whatsapp: #25d366;
+}
+body {
+font-family: 'Segoe UI', Roboto, sans-serif;
+background-color: var(--bg-body);
+color: var(--primary-text);
+margin: 0;
+padding-bottom: 80px; /* Espacio para el botón flotante */
+}
+/* Barra Superior Fija */
+.header-bar {
+position: sticky;
+top: 0;
+background: rgba(0, 0, 0, 0.9);
+backdrop-filter: blur(10px);
+padding: 15px;
+text-align: center;
+border-bottom: 1px solid #333;
+z-index: 1000;
+}
+.header-bar h1 {
+margin: 0;
+font-size: 1.2rem;
+text-transform: uppercase;
+letter-spacing: 2px;
+color: var(--accent);
+}
+/* Contenedor Principal */
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 15px;
+display: grid;
+/* Móvil: 1 columna | Tablet: 2 | PC: 3 */
+grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+gap: 20px;
+}
+/* Tarjetas de Producto */
+.card {
+background: var(--bg-card);
+border-radius: 12px;
+overflow: hidden;
+border: 1px solid #222;
+}
+.card-img {
+width: 100%;
+height: auto;
+aspect-ratio: 3/4; /* Proporción ideal para ropa */
+object-fit: cover;
+}
+.card-content {
+padding: 15px;
+}
+.price {
+font-size: 1.6rem;
+font-weight: bold;
+margin: 5px 0;
+color: #fff;
+}
+.product-title {
+font-size: 1.1rem;
+margin: 5px 0;
+color: var(--secondary-text);
+}
+.details-box {
+background: #282828;
+padding: 10px;
+border-radius: 8px;
+margin-top: 10px;
+font-size: 0.85rem;
+}
+.size-badge {
+display: inline-block;
+background: var(--accent);
+color: #000;
+padding: 2px 6px;
+border-radius: 4px;
+font-weight: bold;
+margin-right: 4px;
+}
+/* Botón de WhatsApp Flotante (Ideal para Celular) */
+.btn-float {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background-color: var(--whatsapp);
+color: white;
+padding: 12px 20px;
+border-radius: 50px;
+text-decoration: none;
+font-weight: bold;
+box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+display: flex;
+align-items: center;
+gap: 10px;
+z-index: 2000;
+transition: transform 0.3s;
+}
+.btn-float:active {
+transform: scale(0.9);
+}
+/* Estilo para pantallas grandes */
+@media (min-width: 768px) {
+.header-bar h1 { font-size: 1.8rem; }
+.container { padding: 30px; gap: 30px; }
+}
+</style>
+</head>
+<body>
+<div class="header-bar">
+<h1>CATÁLOGO 2026</h1>
+</div>
+<a href="https://wa.me/541166069613" class="btn-float" target="_blank">
+<span>Consultar WhatsApp</span>
+</a>
+<div class="container">
+<div class="card">
+<img src="campera%20farenheite%20premium.jpg" class="card-img">
+<div class="card-content">
+<div class="price">$110,000</div>
+<div class="product-title">Campera Farenheite Premium</div>
+<div class="details-box">
+<div><strong>COD:</strong> 01CP1047</div>
+<div style="margin-top: 5px;">
+<strong>Talles:</strong> <span class="size-badge">L</span><span class="size-badge">XL</span>
+</div>
+</div>
+</div>
+</div>
+<div class="card">
+<img src="campera%20engomada.jpg" class="card-img">
+<div class="card-content">
+<div class="price">$80,000</div>
+<div class="product-title">Campera Engomada</div>
+<div class="details-box">
+<div><strong>COD:</strong> 10CP1008</div>
+<div style="margin-top: 5px;">
+<strong>Talles:</strong> <span class="size-badge">L</span><span class="size-badge">XL</span>
+</div>
+</div>
+</div>
+</div>
+<div class="card">
+<img src="campera%20farenheite.jpg" class="card-img">
+<div class="card-content">
+<div class="price">$100,000</div>
+<div class="product-title">Campera Farenheite</div>
+<div class="details-box">
+<div><strong>COD:</strong> 02CP1029</div>
+<div style="margin-top: 5px;">
+<strong>Talles:</strong> <span class="size-badge">L</span><span class="size-badge">XL</span><span class="size-badge">XXL</span>
+</div>
+</div>
+</div>
+</div>
+<div class="card">
+<img src="campera.jpg" class="card-img">
+<div class="card-content">
+<div class="price">$100,000</div>
+<div class="product-title">Campera Clásica</div>
+<div class="details-box">
+<div><strong>COD:</strong> 03CP1036</div>
+<div style="margin-top: 5px;">
+<strong>Talles:</strong> <span class="size-badge">L</span><span class="size-badge">XL</span>
+</div>
+</div>
+</div>
+</div>
+<div class="card">
+<img src="campera%20tipo%20uniclo.jpg" class="card-img">
+<div class="card-content">
+<div class="price">$70,000</div>
+<div class="product-title">Campera Tipo Uniclo</div>
+<div class="details-box">
+<div><strong>COD:</strong> 10CP1002</div>
+<div style="margin-top: 5px;">
+<strong>Talles:</strong> <span class="size-badge">L</span><span class="size-badge">XL</span>
+</div>
+</div>
+</div>
+</div>
+<div class="card">
+<img src="parka%20polo%20premium.jpg" class="card-img">
+<div class="card-content">
+<div class="price">$85,000</div>
+<div class="product-title">Parka Polo Premium</div>
+<div class="details-box">
+<div><strong>COD:</strong> 99CPPR1001</div>
+<div style="margin-top: 5px;">
+<strong>Colores:</strong> Azul / Verde <br>
+<strong>Talles:</strong> <span class="size-badge">S</span><span class="size-badge">M</span><span class="size-badge">L</span><span class="size-badge">XL</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>
